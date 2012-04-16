@@ -1,0 +1,40 @@
+body a{
+	
+	color:#05A4EE;
+}
+#header #nav{
+
+	background-image: linear-gradient(bottom, #050505 39%, #423F42 70%, #525252 85%);
+	background-image: -o-linear-gradient(bottom, #050505 39%, #423F42 70%, #525252 85%);
+	background-image: -moz-linear-gradient(bottom, #050505 39%, #423F42 70%, #525252 85%);
+	background-image: -webkit-linear-gradient(bottom, #050505 39%, #423F42 70%, #525252 85%);
+	background-image: -ms-linear-gradient(bottom, #050505 39%, #423F42 70%, #525252 85%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.39, #050505),
+		color-stop(0.7, #423F42),
+		color-stop(0.85, #525252)
+	);
+	overflow:hidden;
+	height:40px;
+}
+#header #nav ul{
+	list-style:none;
+}
+#header #nav ul li{
+	float:left;
+	
+}
+#header #nav ul li a{
+	padding:10px;
+	text-decoration:none;
+	color:#05A4EE;
+	display:inline-block;
+}
+#header #nav #user-nav{
+	float:right;
+	padding-top:10px;
+	padding-right:10px;
+}
