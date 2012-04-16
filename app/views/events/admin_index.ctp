@@ -1,3 +1,4 @@
+
 <?php
 /**
 * @author 
@@ -6,10 +7,12 @@
 * @copyright 
 * @license 
 **/
-
+echo $this->Html->script('event',FALSE);
+echo $this->Html->css('event');
 echo $this->Form->create('Event',array('action'=>'index'));
 echo $this->Form->input('event_titles',array('label'=>'STEP 1: INSERT EVENT TITLE'));
-echo '<p>Get Ticket</p>';
+echo '<div class="ticketlink">'.$html->link('Get Ticket', array('controller'=>'Tickets','action'=>'index','admin'=>FALSE), array('onclick'=>"var openWin = window.open('".$html->url(array('action'=>'index')."', '_blank', 'toolbar=0,scrollbars=1,location=0,status=1,menubar=0,resizable=1,width=500,height=500');  return false;"))).'</div>';
+
 //echo $this->Form->input('event_des',array('label'=>'STEP 2: ADD EVENT DESCRIPTIONS','type'=>'textarea'));
 echo $tinymce->input('event_des', array('type'=>'textarea','label'=>'test'), array(
           'theme'                             => 'advanced',

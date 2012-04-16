@@ -11,17 +11,17 @@ class User extends AppModel {
 
 	var $name = 'User';
 	var $primaryKey = 'uid';
-	var $hasMany = array(
-	 	'events'=>array(
-			'className'=>'events'
-		),
-		'tickets'=>array(
-			'className'=>'tickets'
-		),
-		'customers'=>array(
-			'customers'=>'customers'
-		)
-	 );
+//	var $hasMany = array(
+//	 	'events'=>array(
+//			'className'=>'events'
+//		),
+//		'tickets'=>array(
+//			'className'=>'tickets'
+//		),
+//		'customers'=>array(
+//			'customers'=>'customers'
+//		)
+//	 );
 //	 var $hasOne = array(
 //	 	'userbankinfos'=>array(
 //			'className'=>'userbankinfos'

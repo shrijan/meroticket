@@ -31,9 +31,9 @@
 		echo $this->Html->css('menu');
 		echo $this->Html->script('jquery-1.7.2.min');
 		echo $scripts_for_layout;
-		echo $this->Html->script('script');
-		
-		
+		?>
+		<?php
+		echo $this->Js->writeBuffer(array('cache'=>true));
 	?>
 </head>
 <body>
@@ -65,7 +65,7 @@
 		</div>
 		<div id="content">
 			
-			<?php echo $this->Session->flash(); ?>
+			<?php //echo $this->Session->flash(); ?>
 
 			<?php echo $content_for_layout; ?>
 

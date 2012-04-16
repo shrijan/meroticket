@@ -1,7 +1,7 @@
 <?php
 class AppController extends Controller{
 	var $components = array('Auth','Session');
-	//var $helpers = array('Menu');
+	var $helpers = array('Js');
 	var $_User = array(); 
 	function beforeFilter(){
 	    $this->Auth->fields = array(
