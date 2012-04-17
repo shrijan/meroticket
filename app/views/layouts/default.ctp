@@ -53,10 +53,8 @@
 					
 				</div>
 				<ul>
-				
 					<li><?php echo $html->link('Add Event',array('controller'=>'events','action'=>'index'))?></li>
 					<li><?php echo $html->link('User Profile',array('controller'=>'users','action'=>'index'))?></li>
-
 				</ul>
 			<?php else: ?>
 					<?php echo $html->link('Register',array('controller'=>'users','action'=>'add'));?> or
