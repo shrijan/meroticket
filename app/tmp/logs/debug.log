@@ -544,3 +544,5 @@
 2012-04-17 04:24:51 Debug: Notice (8): Undefined index: url in [C:\wamp\www\meroticket\app\config\bootstrap.php, line 58]
 2012-04-17 04:25:10 Debug: Notice (8): Undefined index: url in [C:\wamp\www\meroticket\app\config\bootstrap.php, line 57]
 2012-04-17 04:25:10 Debug: Notice (8): Undefined index: url in [C:\wamp\www\meroticket\app\config\bootstrap.php, line 58]
+2012-04-17 07:33:34 Debug: Notice (8): Undefined index: url in [C:\xampp\htdocs\meroticket\app\config\bootstrap.php, line 57]
+2012-04-17 07:33:34 Debug: Notice (8): Undefined index: url in [C:\xampp\htdocs\meroticket\app\config\bootstrap.php, line 58]
