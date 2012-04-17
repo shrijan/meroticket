@@ -12,7 +12,6 @@ class TicketsController extends AppController {
 	var $name= 'Tickets';
 	//var $helpers = array('Js');
 	var $components = array('RequestHandler');
-
 	function index() {
 		if(!empty($this->data)){
 			if($this->Ticket->save($this->data)){
@@ -26,13 +25,10 @@ class TicketsController extends AppController {
 			}
 		}
 	}
-	function admin_index(){
-		
-		
+	function admin_index(){	
 	}
 	function validate_form(){
 		if($this->RequestHandler->isAjax()){
-		
 			//echo $this->validateErrors($this->Ticket);
 			$this->data['Ticket'][$this->params['form']['field']] = $this->params['form']['value'];
 			$this->Ticket->set($this->data);
