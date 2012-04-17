@@ -53,6 +53,7 @@
 					
 				</div>
 				<ul>
+				
 					<li><?php echo $html->link('Add Event',array('controller'=>'events','action'=>'index'))?></li>
 					<li><?php echo $html->link('User Profile',array('controller'=>'users','action'=>'index'))?></li>
 
