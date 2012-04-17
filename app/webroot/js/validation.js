@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('#ticket_name').blur(function(){
 		$.post(
-			'http://localhost/meroticket/tickets/validate_form',
+			'http://localhost:8080/meroticket/tickets/validate_form',
 			{field:$('#ticket_name').attr('id'),value:$('#ticket_name').val()},
 			handleNameValidation
 		);
@@ -9,7 +9,7 @@ $(document).ready(function(){
 	})
 	$('#price').blur(function(){
 		$.post(
-			'http://localhost/meroticket/tickets/validate_form',
+			'http://localhost:8080/meroticket/tickets/validate_form',
 			{field:$('#price').attr('id'),value:$('#price').val()},
 			handlePriceValidation
 		);
