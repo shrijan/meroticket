@@ -1,0 +1,15 @@
+.ticketlink{
+	background: -moz-linear-gradient(center top , #A8EA9C, #62AF56) repeat scroll 0 0 #62AF56;
+    border-color: #2D6324;
+    color: #000000;
+    text-shadow: 0 1px 0 #8CEE7C;
+	height:20px;
+	width:100px;
+	border-radius: 8px 8px 8px 8px;
+}
+.ticketlink a{
+	
+	color:#000;
+	text-decoration:none;
+	
+}
