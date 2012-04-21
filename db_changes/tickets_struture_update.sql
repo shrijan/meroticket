@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `tickets` (
+  `tickets_id` int(11) NOT NULL AUTO_INCREMENT,
+  `eventid` varchar(255) DEFAULT NULL,
+  `ticketcatid` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `discount_id` int(11) DEFAULT NULL,
+  `Ticket_barcodeid` varchar(255) DEFAULT NULL,
+  `ticket_valid_date` varchar(255) DEFAULT NULL,
+  `uid` varchar(255) DEFAULT NULL,
+  `seating_info` varchar(255) DEFAULT NULL,
+  `ticketTypeID` int(11) DEFAULT NULL,
+  `ticket_name` varchar(32) NOT NULL,
+  PRIMARY KEY (`tickets_id`),
+  KEY `discount_id` (`discount_id`),
+  KEY `eventid` (`eventid`),
+  KEY `Ticket_barcodeid` (`Ticket_barcodeid`),
+  KEY `ticketcatid` (`ticketcatid`),
+  KEY `ticketTypeID` (`ticketTypeID`),
+  KEY `uid` (`uid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
