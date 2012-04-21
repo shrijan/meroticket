@@ -17,6 +17,9 @@ class TicketsController extends AppController {
 			if($this->Ticket->save($this->data)){
 				if($this->RequestHandler->isAjax()){
 					$this->render('success','ajax');
+					
+					$this->Ticket->id = $this->Ticket->getLastInsertId();
+					pr($this->Ticket->read());
 				}else{
 					$this->Session->setFlash('Message sent');
 					$this->redirect(array('action'=>'index'));

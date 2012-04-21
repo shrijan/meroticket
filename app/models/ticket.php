@@ -17,7 +17,7 @@ class Ticket extends AppModel {
 			'message'=>'Enter ticket name'
 		),
 		'price'=>array(
-			'rule'=>array('numeric','notEmpty'), 
+			'rule'=>array('numeric'), 
 			'message'=>'Enter price of ticket'         
 		)
 	);
