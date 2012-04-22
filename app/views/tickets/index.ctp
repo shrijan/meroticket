@@ -1,9 +1,11 @@
-
-
 <?php
+    echo($this->requestAction('tickets/index'));
+	echo $this->Html->script('validation',FALSE);
+	echo $this->Html->css('event','stylesheet',array('inline'=>FALSE));
+?>
 	
-	echo $this->Html->script('validation',FALSE);?>
 	<div id="success"></div>
+	<div id='popUpbox'>
 	<?php
 	echo '<h1>Create tickets for each price, sales date, or other options.</h1>';
 	echo $this->Form->create('Ticket',array('action'=>'index'));
@@ -17,3 +19,4 @@
 	echo $this->Form->end();
 ?>
 	<div id="sending" style="display:none;background-color:lightgreen"> Sending ... </div>
+</div>

@@ -11,7 +11,8 @@ echo $this->Html->script('event',FALSE);
 echo $this->Html->css('event','stylesheet',array('inline'=>FALSE));
 echo $this->Form->create('Event',array('action'=>'index'));
 echo $this->Form->input('event_titles',array('label'=>'STEP 1: INSERT EVENT TITLE'));
-echo $this->element('index');
+echo '<div class="ticketlink">Mero ticket</div>';
+
 
 //echo $this->Form->input('event_des',array('label'=>'STEP 2: ADD EVENT DESCRIPTIONS','type'=>'textarea'));
 echo $tinymce->input('event_des', array('type'=>'textarea','label'=>'test'), array(
@@ -58,5 +59,5 @@ echo $this->Form->input('event_suburb',array('label'=>'Event Suburb'));
 echo $this->Form->input('event_postcode',array('label'=>'Event Postcode'));
 echo '</fieldset>';
 echo $this->Form->end('Add Event');
-
+echo $this->element('indexTicket');
 ?>

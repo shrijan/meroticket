@@ -33,6 +33,7 @@
 		echo $scripts_for_layout;
 		?>
 		<?php
+		//cache(str_replace(WWW_ROOT.'/cahce', '', JS));
 		echo $this->Js->writeBuffer(array('cache'=>true));
 	?>
 </head>
