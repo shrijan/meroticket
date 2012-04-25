@@ -11,11 +11,13 @@ class EventsController extends AppController {
 
 	var $name= 'Events';
 	var $helpers = array('Javascript','Tinymce','Html');
-
-	function index() {
 	
+	
+	function index() {
+
 	if($this->Session->check('Auth.User')){
 		$this->redirect(array('controller'=>'Events','action'=>'index','admin'=>true)); 
+		
 	}else{
 		$this->redirect(array('controller'=>'Users','action'=>'login'));
 	}
@@ -23,26 +25,17 @@ class EventsController extends AppController {
 		
 	}
 	function admin_index(){
-		
-		
-	}
 
-	function view() {
-		
-	}
-
-
-	function admin_add(){
-			
+	//pr($this->data);
 		if(!empty($this->data)){
-				
-			$this->Event->Create();
-			
+		$this->Event->Create();
+		$this->Event->set($this->data);
+		//echo $this->Event->validates();
 			if($this->Event->save($this->Event)){
-			  //$this->Event;
-			   //echo "test";
+			
+					$this->Event->invalidFields();
 					$this->Session->setFlash(__('The Event has been saved',TRUE));
-					$this->redirect(array('action' => 'index'));
+					$this->redirect(array('controller'=>'Events','action' => 'index','admin'=>TRUE));
 			}else{
 			
 				$db_exits = $this->Event->invalidFields();
@@ -52,6 +45,14 @@ class EventsController extends AppController {
 				$this->Session->setFlash(__('The Event Information could not be saved.Please, try again',TRUE));
 			}
 		}
+
+		
 	}
+
+	function view() {
+		
+	}
+
+
 }
 ?>

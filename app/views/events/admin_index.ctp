@@ -9,7 +9,7 @@
 **/
 echo $this->Html->script('event',FALSE);
 echo $this->Html->css('event','stylesheet',array('inline'=>FALSE));
-echo $this->Form->create('Event',array('action'=>'admin_add'));
+echo $this->Form->create('Event',array('action'=>'admin_index'));
 echo $this->Form->input('event_titles',array('label'=>'STEP 1: INSERT EVENT TITLE'));
 echo '<div class="ticketlink">Mero ticket</div>';
 
