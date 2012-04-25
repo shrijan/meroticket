@@ -31,6 +31,27 @@ class EventsController extends AppController {
 		
 	}
 
-	
+
+	function admin_add(){
+			
+		if(!empty($this->data)){
+				
+			$this->Event->Create();
+			
+			if($this->Event->save($this->Event)){
+			  //$this->Event;
+			   //echo "test";
+					$this->Session->setFlash(__('The Event has been saved',TRUE));
+					$this->redirect(array('action' => 'index'));
+			}else{
+			
+				$db_exits = $this->Event->invalidFields();
+				if(array_key_exists('unique',$db_exits) && (sizeof($db_exits)==1))
+				$this->Session->setFlash(__('The Event aleardy exits in our database',TRUE));
+				else
+				$this->Session->setFlash(__('The Event Information could not be saved.Please, try again',TRUE));
+			}
+		}
+	}
 }
 ?>
