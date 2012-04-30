@@ -10,7 +10,7 @@
 class EventsController extends AppController {
 
 	var $name= 'Events';
-	var $helpers = array('Javascript','Tinymce','Html');
+	var $helpers = array('Javascript','Tinymce','Html','Date');
 	
 	
 	function index() {
@@ -25,13 +25,26 @@ class EventsController extends AppController {
 		
 	}
 	function admin_index(){
-
-	//pr($this->data);
 		if(!empty($this->data)){
+		 $dateStartfield = $this->data['Event']['start_dates'];
+		 $dateEndfield = $this->data['Event']['end__dates'];
+		
+		 
+		 $dateStartString = $dateStartfield['year'] . '-' .$dateStartfield['month'] . '-' . $dateStartfield['day']. ' ' .$dateStartfield['hour'] . ':' . $dateStartfield['min'];
+		 
+		  $dateEndString = $dateEndfield['year'] . '-' .$dateEndfield['month'] . '-' . $dateEndfield['day']. ' ' .$dateEndfield['hour'] . ':' . $dateEndfield['min'];
+		 
+		 
+		$this->data['Event']['start_dates'] = $dateStartString;
+		//pr($this->data['Event']['start_dates']);
+		$this->data['Event']['end__dates']= $dateEndString;
+		//pr($this->data['Event']['end_dates']);
+		//pr($this->data['Event']['end_dates']);
+		pr($this->data['Event']);
 		$this->Event->Create();
 		$this->Event->set($this->data);
 		//echo $this->Event->validates();
-			if($this->Event->save($this->Event)){
+		if($this->Event->save($this->Event)){
 			
 					$this->Event->invalidFields();
 					$this->Session->setFlash(__('The Event has been saved',TRUE));
@@ -48,6 +61,7 @@ class EventsController extends AppController {
 
 		
 	}
+
 
 	function view() {
 		

@@ -19,9 +19,42 @@ class Event extends AppModel {
 			)
 		),
 		'event_des'=>array(
+			'Please Enter the Event Description' => array(
 			'rule'=>'notEmpty', 
-			'message'=>'Enter event description'         
+			'message'=>'Enter event description'  
+			)       
+		),
+		'start_dates' => array(
+			'event_start_date_cannot_be_empty' => array(
+			'rule' => 'notEmpty',
+			'message' => 'This Event is Missing Event Start Date'
+			)
+		),
+		'end__dates' => array(
+			'event_end_date_cannot_be_empty' => array(
+			'rule' => 'notEmpty',
+			'message' => 'This Event is Missing Event End Date'
+			)
+		),
+		'event_addresses' => array(
+			'event_must_have_address' => array(
+			'rule' => 'notEmpty',
+			'message' => 'This Event is Missing Event Address'
+			)
+		),
+		'event_postcodes' => array(
+			'event_must_have_postcode' => array(
+			'rule' => 'notEmpty',
+			'message' => 'Please Enter the Post Code'
+			)
+		),
+		'event_suburbs' => array(
+			'event_must_have_suburb' => array(
+			'rule' => 'notEmpty',
+			'message' => 'Please Enter the Suburb'
 		)
+	  )
+	  	 
 	);
 //	var $hasOne = array(
 //		'users'=>array(

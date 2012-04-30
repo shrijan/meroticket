@@ -25,28 +25,38 @@ echo $tinymce->input('event_des', array('type'=>'textarea','label'=>'STEP 2: Ple
 //echo $this->Html->fieldset('Insert starting date');
 echo '<fieldset>';
 echo '<legend> starting date </legend>';
-echo $this->Form->input('start_dates', array(
+/*echo $this->Form->input('start_dates', array(
     'type' => 'datetime',
     'dateFormat' => 'DMY',
     'minYear' => date('Y'),
     'maxYear' => date('Y')+4,
     'timeFormat' => '24',
     'selected' => date('Y-m-d H:i:s'),
-    'attributes' => array(),
     'empty' => FALSE
         )
+);*/
+
+echo $this->Form->input('start_dates', array(
+		'type'=> 'datetime', 
+		 'dateFormat' => 'DMY',
+		  'minYear' => date('Y'), 
+		  'maxYear' => date('Y')+4,
+		  'timeFormat' => '24',
+   		 'selected' => date('Y-m-d H:i:s'),
+    	'empty' => FALSE
+		  )
 );
 echo '</fieldset>';
 echo '<fieldset>';
 echo '<legend> End date </legend>';
-echo $this->Form->input('end_dates', array(
+echo $this->Form->input('end__dates', array(
     'type' => 'datetime',
     'dateFormat' => 'DMY',
     'minYear' => date('Y') ,
     'maxYear' => date('Y')+4,
     'timeFormat' => '24',
     'selected' => date('Y-m-d H:i:s'),
-    'attributes' => array(),
+   // 'attributes' => array(),
     'empty' => FALSE
       )
 );
@@ -55,8 +65,8 @@ echo '<h1>Step 5: Add Where</h1>';
 echo '<fieldset>';
 echo '<legend>Location </legend>';
 echo $this->Form->input('event_addresses',array('label'=>'Address'));
-echo $this->Form->input('event_suburb',array('label'=>'Event Suburb'));
-echo $this->Form->input('event_postcode',array('label'=>'Event Postcode'));
+echo $this->Form->input('event_suburbs',array('label'=>'Event Suburb'));
+echo $this->Form->input('event_postcodes',array('label'=>'Event Postcode'));
 echo '</fieldset>';
 echo '<fieldset>';
 echo $this->Form->input('Event_pictures',array('label'=>'Upload Event Pictures'));
