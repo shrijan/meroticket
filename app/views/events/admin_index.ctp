@@ -24,6 +24,11 @@ echo $tinymce->input('event_des', array('type'=>'textarea','label'=>'STEP 2: Ple
         )); 
 //echo $this->Html->fieldset('Insert starting date');
 echo '<fieldset>';
+ 	echo '<legend> Select Event Type </legend>';
+	echo $this->Form->input('eventsTypeID', array('type' => 'select'));
+echo '</fieldset>';
+echo '<fieldset>';
+
 echo '<legend> starting date </legend>';
 /*echo $this->Form->input('start_dates', array(
     'type' => 'datetime',
@@ -69,7 +74,26 @@ echo $this->Form->input('event_suburbs',array('label'=>'Event Suburb'));
 echo $this->Form->input('event_postcodes',array('label'=>'Event Postcode'));
 echo '</fieldset>';
 echo '<fieldset>';
-echo $this->Form->input('Event_pictures',array('label'=>'Upload Event Pictures'));
+//echo $this->Form->input('Event_pictures',array('label'=>'Upload Event Pictures'));
+
+echo '<ul>';
+   echo '<li>';
+         echo $this->Form->label('Image/images', 'Upload Event Image 1:' );
+         echo $this->Form->file('Image/filedata1');
+   echo '</li>';
+   echo '<li>';
+         echo $this->Form->label('Image/images', 'Upload Event Image 2:' );
+         echo $this->Form->file('Image/filedata2');
+   echo '</li>';
+   echo '<li>';
+         echo  $this->Form->label('Image/images', 'Upload Event Image 3:' );
+         echo $this->Form->file('Image/filedata3');
+   echo '</li>';
+   echo '<li>';
+         echo $this->Form->label('Image/images', 'Upload Event Image 4:' );
+         echo $this->Form->file('Image/filedata4');
+   echo '</li>';
+echo '</ul>';
 echo '</fieldset>';
 echo $this->Form->end('Add Event');
 //echo $this->element('indexTicket');

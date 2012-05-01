@@ -28,12 +28,20 @@ class Event extends AppModel {
 			'event_start_date_cannot_be_empty' => array(
 			'rule' => 'notEmpty',
 			'message' => 'This Event is Missing Event Start Date'
+			),
+			'event_compare_with_end_date' => array(
+			'rule' => 'compareDates',
+			'message' => 'The Start Date Cannot be Greater than Start date'
 			)
 		),
 		'end__dates' => array(
 			'event_end_date_cannot_be_empty' => array(
 			'rule' => 'notEmpty',
 			'message' => 'This Event is Missing Event End Date'
+			),
+			'event_compare_with_start_date' => array(
+			'rule' => 'compareDates',
+			'message' => 'The End Date Cannot be Smaller than end date'
 			)
 		),
 		'event_addresses' => array(
@@ -137,5 +145,10 @@ class Event extends AppModel {
 //		)*/
 //		
 //	);
+	public function compareDates()
+	{
+		return strtotime($this->data[$this->alias]['start_dates'])<
+		 strtotime($this->data[$this->alias]['end__dates']);
+	}
 }
 ?>

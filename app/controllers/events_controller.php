@@ -26,6 +26,8 @@ class EventsController extends AppController {
 	}
 	function admin_index(){
 		if(!empty($this->data)){
+		// $eventCategories = $this->Event->Eventscategory->find('list');
+		 //$this->set(compact('eventscategorys'));
 		 $dateStartfield = $this->data['Event']['start_dates'];
 		 $dateEndfield = $this->data['Event']['end__dates'];
 		
