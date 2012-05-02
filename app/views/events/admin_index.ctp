@@ -25,7 +25,15 @@ echo $tinymce->input('event_des', array('type'=>'textarea','label'=>'STEP 2: Ple
 //echo $this->Html->fieldset('Insert starting date');
 echo '<fieldset>';
  	echo '<legend> Select Event Type </legend>';
-	echo $this->Form->input('eventsTypeID', array('type' => 'select'));
+	echo $this->Form->select
+			(
+				'eventsTypeID',
+				$categories,
+				null,
+				array(),
+				FALSE
+			);
+	//echo $this->Form->input('eventsTypeID', array('type' => 'select'));
 echo '</fieldset>';
 echo '<fieldset>';
 

@@ -11,6 +11,8 @@ class Event extends AppModel {
 
 	var $name = 'Event';
 	var $primaryKey = 'eventsID';
+	var $belongsTo = 'Eventscategory';
+	
 	var $validate = array(
 		'event_titles'=>array(
 			'Please enter event titles.'=>array(
@@ -21,8 +23,14 @@ class Event extends AppModel {
 		'event_des'=>array(
 			'Please Enter the Event Description' => array(
 			'rule'=>'notEmpty', 
-			'message'=>'Enter event description'  
+			'message'=>'Enter Event Description'  
 			)       
+		),
+		'eventsTypeID'=>array(
+			'Please Select the Event Category' => array(
+			'rule'=>'notEmpty',
+			'message'=>'Please Select Event Type'
+			)
 		),
 		'start_dates' => array(
 			'event_start_date_cannot_be_empty' => array(
