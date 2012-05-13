@@ -24,7 +24,7 @@ class UsersController extends AppController {
 	function login(){
   
 			if($this->Session->check('Auth.User')){
-
+				
 				 $this->redirect(array('controller'=>'Events','action'=>'index','admin'=>true)); 
 			}
   
@@ -45,7 +45,9 @@ class UsersController extends AppController {
 		
 	}
 
+	function admin_login() {
 
+	}
 
 	function add(){
 

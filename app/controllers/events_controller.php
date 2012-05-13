@@ -44,10 +44,6 @@ class EventsController extends AppController {
 		//pr($this->data['Event']['start_dates']);
 		$this->data['Event']['end__dates']= $dateEndString;
 		$this->data['Event']['uid'] = $this->Auth->user('utypeid');
-		//pr($this->Auth->user('utypeid'));
-		//pr($this->data['Event']['end__dates']);
-		//pr($this->data['Event']['end_dates']);
-		//pr($this->data['Event']);
 		$this->Event->Create();
 		$this->Event->set($this->data);
 		//echo $this->Event->validates();

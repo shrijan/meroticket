@@ -39,7 +39,7 @@ class Event extends AppModel {
 			),
 			'event_compare_with_end_date' => array(
 			'rule' => 'compareDates',
-			'message' => 'The Start Date Cannot be Greater than Start date'
+			'message' => 'The Start Date Cannot be Greater than End date'
 			)
 		),
 		'end__dates' => array(
